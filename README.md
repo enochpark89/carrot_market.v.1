@@ -211,4 +211,46 @@ first-letter:text-7xl - select the first letter and make it bigger.
 <div className="bg-white" sm:bg-red-400 md:>
 ```
 
+- Add three columns to the grid. 
+- How do you create a grid-column: grid-col.
+    - if you want to place the element or maximize the column, you use grid-col-span
+
+- col-span-1
+- xl:col-span2; xl:col-span1
+- Another query: orientation.
+- 
+
+# 4.11. Dark Mode
+
+- Dark Mode is easy with TailwindCSS.
+- If the user has a dark mode.
+- All you need to do is to add below
+```
+dark: bg-black
+```
+- This will select which color that it will be when the user select the dark mode. 
+
+- This is listening to the preferences of the browser.
+- If you do not want to follow the browser, you can do that by changing the tailwind config file. 
+tailwind.config.js:
+```
+darkMode: "media" or "class
+```
+
+Conclusion:
+1. tailwind.config.js > modify darkMode to media
+2. You put the darkMode class by using dark:
+
+# 4.12 Just in Time Compiler
+
+- TailwindCSS is a large CSS file but there are more to it. 
+- If you are able to group like the modifier, the CSS would be too big. 
+- Tailwind CSS 3.0 introduces Just-In-Time complier to reduce the size of the CSS or to clean the file. 
+- We used to do "purging" before we publish to the website which scan all the files and only keep the ones that we are going to use. 
+- We can now stack modifiers after modifiers. It watches your classes and create on-demand. 
+- In other words, you are only compling the ones that you use from the @Tailwind modules because you don't need it if you don't use it. 
+
+- The best part is sometimes you want to get out of the restriction of the TailwindCSS. JIT, you can set the text bigger
+text-[9874px] instead of the default fonts. 
+bg-[url('/vercel.svg')]"]
 
